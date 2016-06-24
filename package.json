@@ -1,0 +1,28 @@
+{
+  "name": "bigeye",
+  "version": "0.0.1",
+  "description": "to see the world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "node",
+    "movie"
+  ],
+  "author": "lulutia",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.20.0",
+    "ejs": "^2.4.2",
+    "eventproxy": "^0.3.4",
+    "express": "^4.14.0",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.5.1",
+    "superagent": "^2.0.0"
+  },
+  "devDependencies": {}
+}

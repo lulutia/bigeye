@@ -1,0 +1,20 @@
+.navbar{
+    margin-bottom:0px;
+}
+.main-content{
+    font-size:0;
+}
+.main-left{
+    display:inline-block;
+    height:650px;
+    width:20%;
+    background-color:lightblue;
+}
+.main-right{
+    font-size:20px;
+    display:inline-block;
+    vertical-align:top;
+    height:650px;
+    width:80%;
+    background-color:pink;
+}
