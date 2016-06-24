@@ -24,5 +24,12 @@
     "mongoose": "^4.5.1",
     "superagent": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
