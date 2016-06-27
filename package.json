@@ -22,7 +22,8 @@
     "express": "^4.14.0",
     "mongodb": "^2.1.18",
     "mongoose": "^4.5.1",
-    "superagent": "^2.0.0"
+    "superagent": "^2.0.0",
+    "text": "github:requirejs/text"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.6"

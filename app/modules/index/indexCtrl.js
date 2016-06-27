@@ -1,26 +1,22 @@
-define(['app', './indexService', 'jquery'], function(app){
-	app.controller('indexCtrl', indexCtrl);
-	indexCtrl.$inject = ['$scope'];
+define(['app', './indexService', 'text!./index.html'], function(app, indexService, html) {
+  app.controller('indexCtrl', indexCtrl);
+  indexCtrl.$inject = ['$scope', 'indexService'];
 
-	function indexCtrl($scope){
-		$scope.name = "just for test1";	
-	}
+  function indexCtrl($scope, indexService) {
+    $scope.name = "just for test1";
+    $scope.getInitData = function() {
+      indexService.getInitData().then(
+        function(res) {
+          if (res.status === 200) {
+            var resData = res.data[0].items;
+            $scope.initData = resData;
+          }
+        })
+    };
+    $scope.getInitData();
+  }
 
-	$.ajax({   
-       type: 'post',  
-       url: '/app/index',   
-       data: {page:1},   
-       dataType: 'json',  
-       success:function (data){  
-           result = data; 
-           console.log(result); 
-       },    
-       error: function () {  
-           console.log("Save error!");  
-       }  
-  
-   });  
-	var html = "<div ng-controller='indexCtrl'><p>{{name}}</p></div>";
-	
-	return {_tpl: html }
+  return {
+    _tpl: html
+  }
 })

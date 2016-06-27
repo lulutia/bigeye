@@ -10,7 +10,8 @@ require.config({
 		'bootstrap'		: 	'../lib/bower_components/bootstrap/dist/js/bootstrap',
 		'app'			: 	'../app',
 		'appCtrl'		: 	'../appCtrl',
-		'appInit'		: 	'../appInit'
+		'appInit'		: 	'../appInit',
+		'text'			: 	'../lib/bower_components/text/text'
 		},
 	shim: {
 		'angular': {

@@ -1,3 +1,15 @@
 <div ng-controller="indexCtrl">
-<p>{{name}}</p>	
+	<ul class="media-list">
+		<li class="media" ng-repeat='item in initData'>
+			<div class="media-left">
+				<a href="#">
+					<img class="media-object" src='{{item.imgUrl}}' alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h3>{{item.name}}</h3>
+				<p>{{item.other}}</p>
+			</div>
+		</li>
+	</ul>
 </div>
