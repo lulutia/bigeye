@@ -4,16 +4,104 @@
 .main-content{
     font-size:0;
 }
+html{
+    height:100%;
+}
+body{
+    height:100%;
+}
+.app{
+    height:100%;
+}
+.bg{
+    position:fixed;
+    opacity:0.6;
+    -webkit-filter: blur(5px);
+    z-index:-1;
+    overflow:hidden;
+}
+.main-content{
+    height:100%;
+    background-color:rgba(255,255,255,0.8);
+}
 .main-left{
     display:inline-block;
-    height:650px;
-    width:20%;
-    background-color:lightblue;
+    height:100%;
+    width:4%;
+    font-size:16px;
+    background-color:white;
+    border: 1px solid #ccc;
 }
 .main-right{
     font-size:20px;
+    height:100%;
     display:inline-block;
     vertical-align:top;
     height:650px;
-    width:80%;
+    width:96%;
+    overflow:scroll;
+}
+.indexCtrl{
+    height:100%;
+}
+.list-group-item{
+    margin-bottom: 0px;
+    border:none;
+    border-bottom:1px solid #ccc;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.media{
+    list-style: none;
+    border-bottom: 1px dashed #ccc;
+    padding:12px 0;
+}
+.media p{
+    font-size:10px;
+}
+.media img{
+    padding: 0 10px;
+}
+.media-body{
+    width:85%;
+    border-right:1px dashed #ccc;
+}
+.quote{
+    overflow: hidden;
+    padding: 0 24px 5px 15px;
+    margin: 8px 0 0 26px;
+    background: url(https://img3.doubanio.com/f/shire/bea926c649298e9bd59b7e8897f0c34b252a57b9/pics/quotel.png) no-repeat left 4px;
+    width: auto;
+    word-wrap: break-word;
+}
+.quote span.inq{
+    color:#666;
+        background: url(https://img3.doubanio.com/f/shire/61a8c24be622b61a59a8c3445dec15f2ce590e9b/pics/quoter.png) no-repeat right bottom;
+    color: #333;
+    padding-right: 15px;
+    display: inline-block;
+    word-break: break-all;
+}
+.pagination{
+    float:right;
+    margin:0px 200px;
+}
+.rightIcon{
+    margin-right:20px;
+    margin-left:20px;
+}
+.pencil{
+    background-color:rgba(255,255,255,0.3);
+    border: none;
+    font-size:12px;
+    margin:5px 20px;
+    padding:5px 10px;
+    resize:none;
 }

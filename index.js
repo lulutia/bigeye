@@ -26,7 +26,8 @@ var MovieSchema = new mongoose.Schema({
 	items: [{
 		name: String,
 		imgUrl: String,
-		other: String
+		other: String,
+		description: String
 	}],
 });
 var MovieModel = db.model('Movie', MovieSchema);
@@ -67,12 +68,14 @@ function initData() {
 				var $ = cheerio.load(res.text);
 				var title = $('.info .title:first-child');
 				var img = $('.pic img');
-				var otherInfo = $('.info .bd p');
+				var otherInfo = $('.info .bd>p:first-child');
+				var description = $('.quote .inq');
 				for (var titlei = 0; titlei < title.length; titlei++) {
 					var item = {};
 					item.name = $(title[titlei]).text();
 					item.imgUrl = $(img[titlei]).attr('src');
 					item.other = $(otherInfo[titlei]).text();
+					item.description = $(description[titlei]).text();
 					items.push(item);
 				}
 				var moviePage = new MovieModel({

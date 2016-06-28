@@ -1,15 +1,43 @@
-<div ng-controller="indexCtrl">
+<div ng-controller="indexCtrl" class="indexCtrl">
+<img src="../img/bg_img.jpg" class="bg">
 	<ul class="media-list">
-		<li class="media" ng-repeat='item in initData'>
+		<li class="media" ng-repeat='item in initData track by $index'>
 			<div class="media-left">
 				<a href="#">
 					<img class="media-object" src='{{item.imgUrl}}' alt="...">
 				</a>
 			</div>
 			<div class="media-body">
-				<h3>{{item.name}}</h3>
+				<h5>{{item.name}}</h5>
 				<p>{{item.other}}</p>
+				<p class="quote">
+					<span class="inq">{{item.description}}</span></p>
+			</div>
+			<div class="media-right">
+				<div class="leftOpera">
+				<i class="fa fa-heart-o rightIcon" aria-hidden="true"></i>
+				<i class="fa fa-trash rightIcon" aria-hidden="true"></i>
+				<i class="fa fa-pencil rightIcon" aria-hidden="true"></i>
+				</div>
+				<textarea class="pencil"></textarea>
 			</div>
 		</li>
 	</ul>
+		<ul class="pagination">
+			<li>
+				<a href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li>
+				<a href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
 </div>
